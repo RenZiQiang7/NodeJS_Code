@@ -15,7 +15,7 @@ const logUser = (req, res, next) => {
     req.body=actionObj;
    
     let text=`${actionObj.ip}/${actionObj.time}/${actionObj.url}/${actionObj.type}/${actionObj.userAgent}\r`
-    fs.appendFile(`./${getFileName()}`,text,err=>{
+    fs.appendFile(`./logs/${getFileName()}`,text,err=>{
         console.log(err);
     })
     next()
