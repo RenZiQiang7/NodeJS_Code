@@ -12,6 +12,6 @@ app.post("/post", (req, res) => {
 });
 
 // 启动
-app.listen(8080, () => {
+app.listen(8080,'0.0.0.0', () => {
     console.log("server is running at http://127.0.0.1:8080");
 });
